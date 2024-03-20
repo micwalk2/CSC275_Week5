@@ -1,0 +1,13 @@
+﻿  Combatant.cpp
+  Game.cpp
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,36): error C2672: 'std::make_unique': no matching overloaded function found
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3475,6): message : could be 'void std::make_unique(_Types &&...)'
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3469,57): message : or       'std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(const size_t)'
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464,57): message : or       'std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(_Types &&...)'
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
+  Lion.cpp
+  Main.cpp
+  Player.cpp
+  Generating Code...

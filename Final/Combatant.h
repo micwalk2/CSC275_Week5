@@ -1,0 +1,31 @@
+#pragma once
+#include <iostream>
+#include <string>
+
+class Combatant
+{
+public:
+	// Default constructor.
+	Combatant();
+	// Constructor with parameters.
+	Combatant(const std::string& name, int health, int attack, int defense);
+	// Getter method for combatant name.
+	std::string GetName() const;
+	// Getter method for combatant health.
+	int GetHealth() const;
+	// Getter method for combatant defense.
+	int GetDefense() const;
+	// Method to check if the combatant is alive.
+	virtual bool IsAlive() const;
+
+protected:
+	// Method to attack another combatant.
+	virtual int Attack(Combatant& combatant) const;
+	// Method to take damage.
+	virtual void TakeDamage(int damage);
+
+	std::string m_Name;
+	int m_Health;
+	int m_Attack;
+	int m_Defense;
+};

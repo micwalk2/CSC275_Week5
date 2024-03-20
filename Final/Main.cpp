@@ -1,14 +1,23 @@
 // Michael Walker
-// CSC275
+// CSC275: C++ Programming II
+// 
 // Week 5: Final Project
 
-// The application should not be something just to demonstrate the requirements, it should "do" something.
-// The application should have a clear theme.
-// The application is required to have a good User Experience (UX).
-// The application is required to be over commented.
-// The application uses multiple files.
-// The application MUST include a minimum of (smart pointers or multithreading) AND OO (3 classes - 1 base class and 2 derived classes).
-
-// 
+// TODO: Create multiple threads to handle different processes in the game.
+// TODO: Use smart pointers to manage memory.
+// TODO: Create a base class and two derived classes.
 
 #include <iostream>
+#include <string>
+#include "Game.h"
+
+int main()
+{
+	// Set the seed for the random number generator based on the current time.
+	// This will ensure that the random numbers are different each time the program is run.
+	srand(static_cast<unsigned>(time(nullptr)));
+
+	// Create a game object and start the game.
+	Game game;
+	game.StartGame();
+}
