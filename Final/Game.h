@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Combatant.h"
 #include "Player.h"
-#include "Lion.h"
+#include "Enemy.h"
 
 class Game
 {
@@ -13,5 +13,5 @@ public:
 private:
 	// ONLY accessible to the Game class.
 	// Function to display the winner of the game.
-	void DisplayWinner(const Combatant& gladiator, const Combatant& lion) const;
+	void DisplayWinner(const Combatant& gladiator) const;
 };

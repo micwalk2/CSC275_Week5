@@ -9,7 +9,7 @@ void Game::StartGame()
 {
 	// Create two combatants using unique pointers.
 	std::unique_ptr<Player> Gladiator = std::make_unique<Player>("Gladiator", 100, 10, 25);
-	std::unique_ptr<Lion> Lion = std::make_unique<Lion>("Lion", 100, 15, 20);
+	std::unique_ptr<Enemy> Lion = std::make_unique<Enemy>("Lion", 100, 15, 20);
 
 	std::cout << "\n\n";
 	std::cout << "\t*---------------------------------------*\n";
@@ -66,7 +66,7 @@ void Game::StartGame()
 			{
 				// Create two threads to handle the combatants' attacks.
 				std::thread combatant1Thread(&Player::Attack, Gladiator, std::ref(*Lion));
-				std::thread combatant2Thread(&Lion::Attack, Lion, std::ref(*Gladiator));
+				std::thread combatant2Thread(&Enemy::Attack, Lion, std::ref(*Gladiator));
 
 				// Join the threads to synchronize the actions.
 				combatant1Thread.join();
@@ -76,7 +76,9 @@ void Game::StartGame()
 			case 2:
 			{
 				// Call the attack method for combatant2.
-				int damage = Lion->Attack(*Gladiator);
+				Lion->Attack(*Gladiator);
+				// Access the damage dealt after the attack.
+				int damage = Lion->GetLastDamageDealt();
 				// Call the Defend method for the gladiator.
 				Gladiator->Defend(damage);
 				break;
@@ -89,9 +91,12 @@ void Game::StartGame()
 			}
 		}
 	}
+
+	// Display the winner of the game.
+	DisplayWinner(*Gladiator);
 }
 
-void Game::DisplayWinner(const Combatant& gladiator, const Combatant& lion) const
+void Game::DisplayWinner(const Combatant& gladiator) const
 {
 	// Clear the console screen.
 	system("cls");

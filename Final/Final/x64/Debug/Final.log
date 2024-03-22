@@ -1,13 +1,556 @@
-﻿  Combatant.cpp
-  Game.cpp
-C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,36): error C2672: 'std::make_unique': no matching overloaded function found
-E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3475,6): message : could be 'void std::make_unique(_Types &&...)'
-C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
-E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3469,57): message : or       'std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(const size_t)'
-C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
-E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464,57): message : or       'std::unique_ptr<_Ty,std::default_delete<_Ty>> std::make_unique(_Types &&...)'
-C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(12,48): message : 'std::make_unique': invalid template argument for '_Ty', type expected
-  Lion.cpp
-  Main.cpp
+﻿  Game.cpp
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): error C2661: 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple': no overloaded function takes 3 arguments
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(429,5): message : could be 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::pair<_First,_Second> &&)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::pair<_First,_Second> &&)': could not deduce template argument for 'std::pair<_First,_Second> &&' from '_Ty'
+          with
+          [
+              _Ty=Enemy
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(423,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::pair<_First,_Second> &)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::pair<_First,_Second> &)': could not deduce template argument for 'const std::pair<_First,_Second> &' from '_Ty'
+          with
+          [
+              _Ty=Enemy
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(401,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<_Types2...> &&)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<_Types2...> &&)': could not deduce template argument for 'std::tuple<_Types2...> &&' from '_Ty'
+          with
+          [
+              _Ty=Enemy
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(393,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<_Types2...> &)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<_Types2...> &)': could not deduce template argument for 'const std::tuple<_Types2...> &' from '_Ty'
+          with
+          [
+              _Ty=Enemy
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(376,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>> &&)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,56): message : 'initializing': cannot convert from '_Ty' to 'std::allocator_arg_t'
+          with
+          [
+              _Ty=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,56): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(372,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>> &)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>> &)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(366,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(358,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const _This &,const std::unique_ptr<Player,std::default_delete<Player>> &,const std::reference_wrapper<_Ty> &)'
+          with
+          [
+              _Ty=Enemy,
+              _This=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const _This &,const std::unique_ptr<Player,std::default_delete<Player>> &,const std::reference_wrapper<_Ty> &)': expects 5 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy,
+              _This=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(351,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &)': expects 2 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(335,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::pair<_Other1,_Other2> &&) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::pair<_Other1,_Other2> &&) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(329,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const std::pair<_Other1,_Other2> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const std::pair<_Other1,_Other2> &) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(307,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::tuple<_Types1...> &&) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(std::tuple<_Types1...> &&) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(299,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const std::tuple<_Types1...> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const std::tuple<_Types1...> &) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(280,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_This2 &&,_Rest2 &&...) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_This2 &&,_Rest2 &&...) noexcept(<expr>)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(271,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const _This &,const std::unique_ptr<Player,std::default_delete<Player>> &,const std::reference_wrapper<_Ty> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy,
+              _This=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(const _This &,const std::unique_ptr<Player,std::default_delete<Player>> &,const std::reference_wrapper<_Ty> &) noexcept(<expr>)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy,
+              _This=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(264,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(void) noexcept(<expr>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(void) noexcept(<expr>)': expects 0 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(257,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(254,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&,std::integer_sequence<size_t,_Indices2...>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&,std::integer_sequence<size_t,_Indices2...>)': expects 4 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(248,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(242,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&)': expects 2 arguments - 3 provided
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(239,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&,std::integer_sequence<size_t,_Indices1...>)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&,std::integer_sequence<size_t,_Indices1...>)': could not deduce template argument for 'std::integer_sequence<size_t,_Indices1...>' from '_Ty'
+          with
+          [
+              _Ty=Enemy
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(235,5): message : or       'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Enemy
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : while trying to match the argument list '(_Ty, std::unique_ptr<Player,std::default_delete<Player>>, _Ty)'
+          with
+          [
+              _Ty=void (__cdecl Player::* )(Combatant &) const
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Enemy>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\thread(70,45): message : see reference to function template instantiation 'std::unique_ptr<_Tuple,std::default_delete<_Tuple>> std::make_unique<_Tuple,_Ty,std::unique_ptr<Player,std::default_delete<Player>>&,std::reference_wrapper<Enemy>,0>(_Ty &&,std::unique_ptr<Player,std::default_delete<Player>> &,std::reference_wrapper<Enemy> &&)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\thread(88,9): message : see reference to function template instantiation 'void std::thread::_Start<_Ty,std::unique_ptr<Player,std::default_delete<Player>>&,std::reference_wrapper<Enemy>>(_Fn &&,std::unique_ptr<Player,std::default_delete<Player>> &,std::reference_wrapper<Enemy> &&)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Player::* )(Combatant &) const,
+              _Fn=void (__cdecl Player::* )(Combatant &) const
+          ]
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(68,33): message : see reference to function template instantiation 'std::thread::thread<void(__cdecl Player::* )(Combatant &) const,std::unique_ptr<Player,std::default_delete<Player>>&,std::reference_wrapper<_Ty>,0>(_Fn &&,std::unique_ptr<Player,std::default_delete<Player>> &,std::reference_wrapper<_Ty> &&)' being compiled
+          with
+          [
+              _Ty=Enemy,
+              _Fn=void (__cdecl Player::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): error C2661: 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple': no overloaded function takes 3 arguments
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(429,5): message : could be 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::pair<_First,_Second> &&)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::pair<_First,_Second> &&)': could not deduce template argument for 'std::pair<_First,_Second> &&' from '_Ty'
+          with
+          [
+              _Ty=Player
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(423,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::pair<_First,_Second> &)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::pair<_First,_Second> &)': could not deduce template argument for 'const std::pair<_First,_Second> &' from '_Ty'
+          with
+          [
+              _Ty=Player
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(401,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<_Types2...> &&)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<_Types2...> &&)': could not deduce template argument for 'std::tuple<_Types2...> &&' from '_Ty'
+          with
+          [
+              _Ty=Player
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(393,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<_Types2...> &)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<_Types2...> &)': could not deduce template argument for 'const std::tuple<_Types2...> &' from '_Ty'
+          with
+          [
+              _Ty=Player
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(376,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>> &&)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,56): message : 'initializing': cannot convert from '_Ty' to 'std::allocator_arg_t'
+          with
+          [
+              _Ty=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,56): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(372,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>> &)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>> &)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(366,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(358,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const _This &,const std::unique_ptr<Enemy,std::default_delete<Enemy>> &,const std::reference_wrapper<_Ty> &)'
+          with
+          [
+              _Ty=Player,
+              _This=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &,const _This &,const std::unique_ptr<Enemy,std::default_delete<Enemy>> &,const std::reference_wrapper<_Ty> &)': expects 5 arguments - 3 provided
+          with
+          [
+              _Ty=Player,
+              _This=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(351,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::allocator_arg_t,const _Alloc &)': expects 2 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(335,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::pair<_Other1,_Other2> &&) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::pair<_Other1,_Other2> &&) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(329,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const std::pair<_Other1,_Other2> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const std::pair<_Other1,_Other2> &) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(307,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::tuple<_Types1...> &&) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(std::tuple<_Types1...> &&) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(299,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const std::tuple<_Types1...> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const std::tuple<_Types1...> &) noexcept(<expr>)': expects 1 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(280,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_This2 &&,_Rest2 &&...) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_This2 &&,_Rest2 &&...) noexcept(<expr>)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(271,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const _This &,const std::unique_ptr<Enemy,std::default_delete<Enemy>> &,const std::reference_wrapper<_Ty> &) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player,
+              _This=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(const _This &,const std::unique_ptr<Enemy,std::default_delete<Enemy>> &,const std::reference_wrapper<_Ty> &) noexcept(<expr>)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player,
+              _This=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(264,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(void) noexcept(<expr>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(void) noexcept(<expr>)': expects 0 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(257,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(254,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&,std::integer_sequence<size_t,_Indices2...>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_Tpl &&,std::integer_sequence<size_t,_Indices2...>)': expects 4 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(248,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,const _Alloc &,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(242,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&)': expects 2 arguments - 3 provided
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(239,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&,std::integer_sequence<size_t,_Indices1...>)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_Tpl &&,std::integer_sequence<size_t,_Indices1...>)': could not deduce template argument for 'std::integer_sequence<size_t,_Indices1...>' from '_Ty'
+          with
+          [
+              _Ty=Player
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\tuple(235,5): message : or       'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_This2 &&,_Rest2 &&...)'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3464): message : 'std::tuple<void (__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>,std::reference_wrapper<_Ty>>::tuple(_Tag,_This2 &&,_Rest2 &&...)': could not deduce template argument for '__formal'
+          with
+          [
+              _Ty=Player
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\memory(3465,35): message : while trying to match the argument list '(_Ty, std::unique_ptr<Enemy,std::default_delete<Enemy>>, _Ty)'
+          with
+          [
+              _Ty=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+          and
+          [
+              _Ty=std::reference_wrapper<Player>
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\thread(70,45): message : see reference to function template instantiation 'std::unique_ptr<_Tuple,std::default_delete<_Tuple>> std::make_unique<_Tuple,_Ty,std::unique_ptr<Enemy,std::default_delete<Enemy>>&,std::reference_wrapper<Player>,0>(_Ty &&,std::unique_ptr<Enemy,std::default_delete<Enemy>> &,std::reference_wrapper<Player> &&)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+E:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\thread(88,9): message : see reference to function template instantiation 'void std::thread::_Start<_Ty,std::unique_ptr<Enemy,std::default_delete<Enemy>>&,std::reference_wrapper<Player>>(_Fn &&,std::unique_ptr<Enemy,std::default_delete<Enemy>> &,std::reference_wrapper<Player> &&)' being compiled
+          with
+          [
+              _Ty=void (__cdecl Enemy::* )(Combatant &) const,
+              _Fn=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+C:\Users\micha\OneDrive\Desktop\_repos\CSC275_Week5\Final\Game.cpp(69,33): message : see reference to function template instantiation 'std::thread::thread<void(__cdecl Enemy::* )(Combatant &) const,std::unique_ptr<Enemy,std::default_delete<Enemy>>&,std::reference_wrapper<_Ty>,0>(_Fn &&,std::unique_ptr<Enemy,std::default_delete<Enemy>> &,std::reference_wrapper<_Ty> &&)' being compiled
+          with
+          [
+              _Ty=Player,
+              _Fn=void (__cdecl Enemy::* )(Combatant &) const
+          ]
+  Enemy.cpp
   Player.cpp
   Generating Code...

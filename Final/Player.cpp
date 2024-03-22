@@ -9,7 +9,7 @@ Player::Player(const std::string& name, int health, int attack, int defense)
 	m_Defense = defense;
 }
 
-int Player::Attack(Combatant& combatant) const
+void Player::Attack(Combatant& combatant) const
 {
 	// Calculate the damage.
 	int damage = m_Attack - combatant.GetDefense();
@@ -18,7 +18,11 @@ int Player::Attack(Combatant& combatant) const
 		damage = 0;
 	}
 
-	return damage;
+	// Deal the damage to the other combatant.
+	combatant.TakeDamage(damage);
+
+	// Set the last damage dealt.
+	combatant.SetLastDamageDealt(damage);
 }
 
 void Player::Defend(int damage)
