@@ -53,22 +53,6 @@ bool Combatant::IsAlive() const
 	return m_Health > 0;
 }
 
-void Combatant::Attack(Combatant& combatant) const
-{
-	// Calculate the damage.
-	int damage = m_Attack - combatant.m_Defense;
-	if (damage < 0)
-	{
-		damage = 0;
-	}
-
-	// Deal the damage to the other combatant.
-	combatant.TakeDamage(damage);
-
-	// Set the last damage dealt.
-	combatant.SetLastDamageDealt(damage);
-}
-
 void Combatant::TakeDamage(int damage)
 {
 	// Reduce the combatant's health by the damage amount.

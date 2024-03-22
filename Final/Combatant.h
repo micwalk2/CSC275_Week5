@@ -26,7 +26,7 @@ public:
 
 protected:
 	// Method to attack another combatant.
-	virtual void Attack(Combatant& combatant) const;
+	virtual void Attack(Combatant& combatant) const = 0;
 
 	std::string m_Name;
 	int m_Health;

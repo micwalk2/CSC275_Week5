@@ -8,8 +8,11 @@ std::mutex g_Mutex;
 void Game::StartGame()
 {
 	// Create two combatants using unique pointers.
-	std::unique_ptr<Player> Gladiator = std::make_unique<Player>("Gladiator", 100, 10, 25);
-	std::unique_ptr<Enemy> Lion = std::make_unique<Enemy>("Lion", 100, 15, 20);
+	// std::unique_ptr<Player> Gladiator = std::make_unique<Player>("Gladiator", 100, 10, 25);
+	// std::unique_ptr<Enemy> Lion = std::make_unique<Enemy>("Lion", 100, 15, 20);
+	// Create two combatants using raw pointers.
+	Player* Gladiator = new Player("Gladiator", 100, 10, 25);
+	Enemy* Lion = new Enemy("Lion", 100, 15, 20);
 
 	std::cout << "\n\n";
 	std::cout << "\t*---------------------------------------*\n";
@@ -19,23 +22,20 @@ void Game::StartGame()
 	std::cout << "The Emperor raises his hand, and the crowd falls silent. The Emperor speaks, 'Let the games begin!'  The crowd erupts into cheers!\n\n";
 
 	// Pause the system for user input.
-	std::cout << "Press ENTER to continue...";
 	system("pause");
 
 	// Introduce the player combatant.
-	std::cout << "Under the crowd's oppressive noise, a formidable gladiator emerges, their sinewy frame adorned in glistening armor, embodying the epitome of strength and prowess.\n";
+	std::cout << "\nUnder the crowd's oppressive noise, a formidable gladiator emerges, their sinewy frame adorned in glistening armor, embodying the epitome of strength and prowess.\n";
 	std::cout << "The crowd roars in approval as the gladiator raises their weapon, a testament to their unwavering resolve.\n\n";
 
 	// Pause the system for user input.
-	std::cout << "Press ENTER to continue...";
 	system("pause");
 
 	// Introduce the second combatant.
-	std::cout << "The crowd's fervor reaches a fever pitch as a ferocious lion is released from its cage, its primal roar reverberating throughout the coliseum.\n";
+	std::cout << "\nThe crowd's fervor reaches a fever pitch as a ferocious lion is released from its cage, its primal roar reverberating throughout the coliseum.\n";
 	std::cout << "The lion's eyes gleam with an insatiable hunger, its powerful muscles rippling beneath its golden fur.\n\n";
 
 	// Pause the system for user input.
-	std::cout << "Press ENTER to continue...";
 	system("pause");
 
 	// Set up the control loop based on the combatants' alive status.

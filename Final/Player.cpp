@@ -11,8 +11,8 @@ Player::Player(const std::string& name, int health, int attack, int defense)
 
 void Player::Attack(Combatant& combatant) const
 {
-	// Calculate the damage.
-	int damage = m_Attack - combatant.GetDefense();
+	// Calculate the damage factoring in target's defense.
+	int damage = (m_Attack * 10) - combatant.GetDefense();
 	if (damage < 0)
 	{
 		damage = 0;

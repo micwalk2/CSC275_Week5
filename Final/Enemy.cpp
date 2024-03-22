@@ -12,7 +12,7 @@ Enemy::Enemy(const std::string& name, int health, int attack, int defense)
 void Enemy::Attack(Combatant& combatant) const
 {
 	// Calculate the damage.
-	int damage = m_Attack - combatant.GetDefense();
+	int damage = (m_Attack * 10) - combatant.GetDefense();
 	if (damage < 0)
 	{
 		damage = 0;
