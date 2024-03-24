@@ -11,8 +11,8 @@ void Game::StartGame()
 	// std::unique_ptr<Player> Gladiator = std::make_unique<Player>("Gladiator", 100, 10, 25);
 	// std::unique_ptr<Enemy> Lion = std::make_unique<Enemy>("Lion", 100, 15, 20);
 	// Create two combatants using raw pointers.
-	Player* Gladiator = new Player("Gladiator", 100, 10, 25);
-	Enemy* Lion = new Enemy("Lion", 100, 15, 20);
+	Player* Gladiator = new Player("Gladiator", 1000, 12, 25);
+	Enemy* Lion = new Enemy("Lion", 750, 15, 20);
 
 	std::cout << "\n\n";
 	std::cout << "\t*---------------------------------------*\n";
@@ -71,14 +71,16 @@ void Game::StartGame()
 				// Join the threads to synchronize the actions.
 				combatant1Thread.join();
 				combatant2Thread.join();
+
+				// Pause the screen for user input.
+				system("pause");
+
 				break;
 			}
 			case 2:
 			{
-				// Call the attack method for combatant2.
-				Lion->Attack(*Gladiator);
-				// Access the damage dealt after the attack.
-				int damage = Lion->GetLastDamageDealt();
+				// Call the attack method for combatant2 and store it to damage variable.
+				int damage = Lion->Attack(*Gladiator);
 				// Call the Defend method for the gladiator.
 				Gladiator->Defend(damage);
 				break;

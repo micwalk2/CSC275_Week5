@@ -9,7 +9,7 @@ Player::Player(const std::string& name, int health, int attack, int defense)
 	m_Defense = defense;
 }
 
-void Player::Attack(Combatant& combatant) const
+int Player::Attack(Combatant& combatant) const
 {
 	// Calculate the damage factoring in target's defense.
 	int damage = (m_Attack * 10) - combatant.GetDefense();
@@ -23,13 +23,24 @@ void Player::Attack(Combatant& combatant) const
 
 	// Set the last damage dealt.
 	combatant.SetLastDamageDealt(damage);
+
+	std::cout << m_Name << " attacks " << combatant.GetName() << " for " << damage << " damage!" << std::endl;
+	std::cout << combatant.GetName() << " has " << combatant.GetHealth() << " health remaining." << std::endl;
+
+	return damage;
 }
 
 void Player::Defend(int damage)
 {
 	// Calculate damage taken as a percentage reduction based on the defense value.
-	int damageTaken = damage * (100 - m_Defense) / 100;
+	int damageTaken = damage - m_Defense;
 
 	// Call the TakeDamage method.
 	TakeDamage(damageTaken);
+
+	std::cout << m_Name << " defends and takes " << damageTaken << " damage!" << std::endl;
+	std::cout << m_Name << " has " << m_Health << " health remaining." << std::endl;
+	
+	// Pause the screen for user input.
+	system("pause");
 }

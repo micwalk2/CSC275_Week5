@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Combatant.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Combatant.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|solutionrelative:Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BA54867-5876-4E4A-8A29-25A3D03FDDD3}|Final.vcxproj|C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Combatant.h",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Combatant.h",
               "RelativeToolTip": "Combatant.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-18T21:51:04.259Z",
               "EditorCaption": ""
@@ -81,20 +81,20 @@
               "RelativeDocumentMoniker": "Player.h",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.h",
               "RelativeToolTip": "Player.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-18T22:09:36.133Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Enemy.h",
               "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.h",
               "RelativeDocumentMoniker": "Enemy.h",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.h",
               "RelativeToolTip": "Enemy.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAyAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-20T01:59:08.417Z",
               "EditorCaption": ""
@@ -113,7 +113,7 @@
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T20:38:49.269Z",
               "EditorCaption": ""
@@ -126,33 +126,33 @@
               "RelativeDocumentMoniker": "Game.cpp",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Game.cpp",
               "RelativeToolTip": "Game.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAF0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-18T21:56:29.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Combatant.cpp",
               "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Combatant.cpp",
               "RelativeDocumentMoniker": "Combatant.cpp",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Combatant.cpp",
               "RelativeToolTip": "Combatant.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T14:12:19.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-20T02:01:53.134Z",
               "EditorCaption": ""
@@ -165,7 +165,7 @@
               "RelativeDocumentMoniker": "Enemy.cpp",
               "ToolTip": "C:\\Users\\micha\\OneDrive\\Desktop\\_repos\\CSC275_Week5\\Final\\Enemy.cpp",
               "RelativeToolTip": "Enemy.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-20T02:02:04.888Z",
               "EditorCaption": ""

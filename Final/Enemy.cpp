@@ -9,7 +9,7 @@ Enemy::Enemy(const std::string& name, int health, int attack, int defense)
 	m_Defense = defense;
 }
 
-void Enemy::Attack(Combatant& combatant) const
+int Enemy::Attack(Combatant& combatant) const
 {
 	// Calculate the damage.
 	int damage = (m_Attack * 10) - combatant.GetDefense();
@@ -23,4 +23,9 @@ void Enemy::Attack(Combatant& combatant) const
 
 	// Set the last damage dealt.
 	combatant.SetLastDamageDealt(damage);
+
+	std::cout << m_Name << " slashes at " << combatant.GetName() << " for " << damage << " damage!" << std::endl;
+	std::cout << combatant.GetName() << " has " << combatant.GetHealth() << " health remaining." << std::endl;
+
+	return damage;
 }
